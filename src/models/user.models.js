@@ -1,3 +1,4 @@
+// this file consists of user models
 import mongoose,{Schema} from "mongoose";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";

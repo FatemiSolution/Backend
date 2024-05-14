@@ -1,3 +1,4 @@
+// this file consists of video models
 import { Schema } from "mongoose";
 import mongoose from "mongoose";
 import mongooseAggregatePaginate from "mongoose-aggregate-paginate-v2";
@@ -38,5 +39,6 @@ const videoSchema =new Schema({
     }
 
 },{timestamps: true});
+// adding plugin for pagination
 videoSchema.plugin(mongooseAggregatePaginate);// used to aggregate paginations
 export const Video = mongoose.model("Video",videoSchema);

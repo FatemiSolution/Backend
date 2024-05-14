@@ -1,13 +1,6 @@
+// this file Establishes a connection to the MongoDB database.
 import mongoose from "mongoose";
 import { DB_NAME } from "../constants.js";
-
-/**
- * Establishes a connection to the MongoDB database.
- * 
- * @async
- * @function connectDB
- * @returns {Promise<void>}
- */
 const connectDB = async () => {
     try {
         const connectionInstance = await mongoose.connect(`${process.env.MONGODB_URI}/${DB_NAME}`);

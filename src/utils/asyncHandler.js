@@ -1,8 +1,4 @@
-/**
- * Wraps an asynchronous request handler function with error handling.
- * @param {function} requestHandler - The asynchronous request handler function.
- * @returns {function} - The wrapped request handler function.
- */
+// this code snippet provides a convenient way to handle errors in asynchronous request handlers by wrapping them in a middleware function that catches any errors and passes them to the error handling middleware.
 const asyncHandler = (requestHandler) => {
     return (req, res, next) => {
         Promise.resolve(requestHandler(req, res, next)).catch((err) => next(err));
@@ -10,6 +6,8 @@ const asyncHandler = (requestHandler) => {
 };
 
 export {asyncHandler}
+
+
 
 // const asyncHandler = (fn) => {async (req,res,next)=>{
 //     try {

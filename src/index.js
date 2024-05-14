@@ -1,3 +1,5 @@
+
+// This file is used to establish a connection to the MongoDB database and start the server to listen for incoming requests on a specified port. It also handles any errors that may occur during the connection process.
 import dotenv from "dotenv";
 import connectDB from "./db/index.js";
 

@@ -1,3 +1,4 @@
+// this file is creating a custom error class 
 class ApiError extends Error {
 /**
  * Represents a custom error object.

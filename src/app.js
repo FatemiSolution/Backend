@@ -1,3 +1,4 @@
+// This file is used to set up an Express server for handling incoming requests. 
 import express, { application } from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
