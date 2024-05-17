@@ -1,6 +1,6 @@
+// this file is used to save the file from disk to cloudinary 
 import {v2 as cloudinary} from 'cloudinary';
 import fs from 'fs';
-
 
     // Configuration
     cloudinary.config({ 
@@ -8,7 +8,7 @@ import fs from 'fs';
         api_key: process.env.CLOUNDINARY_API_KEY, 
         api_secret: process.env.CLOUNDINARY_API_SECRET,
     });
-
+//function for dealing with cloudinary
     const UploadOnCloudinary = async (localFilePath)=>{
         try {
             if (!localFilePath) return null;

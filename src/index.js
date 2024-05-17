@@ -2,7 +2,7 @@
 // This file is used to establish a connection to the MongoDB database and start the server to listen for incoming requests on a specified port. It also handles any errors that may occur during the connection process.
 import dotenv from "dotenv";
 import connectDB from "./db/index.js";
-
+import { app } from "./app.js";
 dotenv.config({
     path: './env'
 })
@@ -22,11 +22,12 @@ connectDB()
 app.listen(process.env.PORT || 8000, () => {
     console.log(`server is running at port : ${process.env.PORT}`);
 })
-.catch((error)=>{
-    console.log("Mongo db connection failed !!!", error)
 })
-
+.catch((err) => {
+    console.log("MONGO db connection failed !!! ", err);
 });
+
+
 
 
 
