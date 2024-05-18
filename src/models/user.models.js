@@ -5,7 +5,7 @@ import bcrypt from "bcrypt";
 // creating data model for user
 const userSchema = new Schema({
     userName: {
-        typeof: String,
+        type: String,
         required: true,
         unique: true,
         lowercase: true,
@@ -52,7 +52,7 @@ const userSchema = new Schema({
 // pre modifier which will encrypt the password when it is modified
 userSchema.pre("save", async function(next){
     if(this.isModified("password")){
-    this.password = bcrypt.hash(this.password,10);
+    this.password = await bcrypt.hash(this.password,10);
     next();
     }
 });
